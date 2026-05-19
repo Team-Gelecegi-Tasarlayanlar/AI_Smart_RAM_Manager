@@ -20,5 +20,15 @@ namespace AI_Smart_RAM_Manager
 		{
 			InitializeComponent();
 		}
+
+		private void Button_Click(object sender, RoutedEventArgs e)
+		{
+			MessageBox.Show("Butona tıklandı.", "SA");
+		}
+
+		private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+		{
+
+		}
 	}
 }

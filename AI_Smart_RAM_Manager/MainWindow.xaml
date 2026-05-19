@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AI_Smart_RAM_Manager"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="WPF Application Project" Height="450" Width="800">
+	<Grid>
+		<TextBox HorizontalAlignment="Left" Margin="233,141,0,0" TextWrapping="Wrap" Text="SA Metin" VerticalAlignment="Top" Width="71" TextChanged="TextBox_TextChanged" Height="25"/>
+		<Button Content="Bu bir butondur" HorizontalAlignment="Left" Margin="278,252,0,0" VerticalAlignment="Top" Height="109" Width="290" Click="Button_Click"/>
+	</Grid>
 </Window>
