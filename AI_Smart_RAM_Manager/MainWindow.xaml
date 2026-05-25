@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         Title="WPF Application Project" Height="450" Width="800">
 	<Grid>
-		<TextBox HorizontalAlignment="Left" Margin="233,141,0,0" TextWrapping="Wrap" Text="SA Metin" VerticalAlignment="Top" Width="71" TextChanged="TextBox_TextChanged" Height="25"/>
-		<Button Content="Bu bir butondur" HorizontalAlignment="Left" Margin="278,252,0,0" VerticalAlignment="Top" Height="109" Width="290" Click="Button_Click"/>
-	</Grid>
+		<TextBox x:Name="textbox1" HorizontalAlignment="Left" Margin="233,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="71" TextChanged="TextBox_TextChanged" Height="25" Text="sa"/>
+		<Button x:Name="buton" Content="Butona basun" HorizontalAlignment="Left" Margin="278,252,0,0" VerticalAlignment="Top" Height="109" Width="290" Click="Button_Click"/>
+        <Label x:Name="etiket" Content="etiket" HorizontalAlignment="Left" Margin="568,184,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
 </Window>
