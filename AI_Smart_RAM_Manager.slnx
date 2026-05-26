@@ -1,3 +1,9 @@
 <Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
   <Project Path="AI_Smart_RAM_Manager/AI_Smart_RAM_Manager.csproj" />
+  <Project Path="HidecosJSONParser/HidecosJSONParser.vcxproj" Id="c29409b3-aaa7-45c2-943d-affaaf04fff5" />
 </Solution>
