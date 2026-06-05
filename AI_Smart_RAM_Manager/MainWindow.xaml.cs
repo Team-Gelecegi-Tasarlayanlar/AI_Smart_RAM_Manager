@@ -1,17 +1,9 @@
 ﻿using System;
-using System.Media;
-using System.Text;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.IO;
 using System.Diagnostics;
+using System.Windows.Threading;
+
 
 namespace AI_Smart_RAM_Manager
 {
@@ -22,11 +14,25 @@ namespace AI_Smart_RAM_Manager
 	{
 
 		private MediaPlayer myMediaPlayer = new MediaPlayer();
-        public MainWindow()
+		private DispatcherTimer timer;
+		public MainWindow()
 		{
 			InitializeComponent();
 			ListPrograms();
-        }
+			fileCreaterScript = new FileCreater();
+			timer = new DispatcherTimer();
+			timer.Interval = TimeSpan.FromSeconds(3);
+			timer.Tick += Timer_Tick;
+			timer.Start();
+		}
+
+		private void Timer_Tick(object sender, EventArgs e)
+		{
+			if (programsList.SelectedItem == null)
+			{
+				ListPrograms();
+			}
+		}
 
 		private void reloadButtonClick(object sender, RoutedEventArgs e)
 		{
@@ -71,5 +77,5 @@ namespace AI_Smart_RAM_Manager
 				}
 			}
 		}
-    }
+	}
 }

@@ -6,18 +6,36 @@
         xmlns:local="clr-namespace:AI_Smart_RAM_Manager"
         mc:Ignorable="d"
         Title="AI Smart RAM Manager" Height="450" Width="800" Icon="ugandan_knux.ico" WindowStartupLocation="CenterScreen">
-	<Grid Margin="20">
+	<Grid Margin="10">
 		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
 			<RowDefinition Height="Auto"/>
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
 
-		<StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,10">
+		<ToolBarTray Grid.Row="0" Background="White">
+			<ToolBar Band="0" BandIndex="0">
+				<Button Click="reloadButtonClick" ToolTip="Listeyi Yenile">
+					<TextBlock Text="🔄 Yenile" FontWeight="Bold"/>
+				</Button>
+
+				<Separator />
+				<Button Click="killButtonClick" ToolTip="Görevi Sonlandır">
+					<TextBlock Text="❌ Görevi Sonlandır" Foreground="IndianRed" FontWeight="Bold"/>
+				</Button>
+
+				<Separator />
+
+				<Button ToolTip="Yapay Zeka Modunu Aç">
+					<TextBlock Text="🤖 AI Otomasyon"/>
+				</Button>
+			</ToolBar>
+		</ToolBarTray>
+
+		<StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,10">
 			<TextBlock Text="Çalışan Uygulamalar" FontSize="18" FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,20,0"/>
-			<Button x:Name="BtnYenile" Content="Listeyi Yenile" Click="reloadButtonClick" Padding="10,5"/>
-			<Button x:Name="BtnKapat" Content="Görevi Sonlandır" Click="killButtonClick" Padding="10,5" Background="IndianRed" Foreground="White"/>
 		</StackPanel>
 
-		<ListBox x:Name="programsList" Grid.Row="1" DisplayMemberPath="ProcessName"/>
+		<ListBox x:Name="programsList" Grid.Row="2" DisplayMemberPath="ProcessName"/>
 	</Grid>
 </Window>
