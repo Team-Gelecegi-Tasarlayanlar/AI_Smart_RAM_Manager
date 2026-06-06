@@ -19,7 +19,6 @@ namespace AI_Smart_RAM_Manager
 		{
 			InitializeComponent();
 			ListPrograms();
-			fileCreaterScript = new FileCreater();
 			timer = new DispatcherTimer();
 			timer.Interval = TimeSpan.FromSeconds(3);
 			timer.Tick += Timer_Tick;
